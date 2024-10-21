@@ -16,7 +16,7 @@ function Prompt {
 
     # 检查是否在 Git 仓库中，并显示当前分支
     if ($gitStatus = Get-GitStatus) {
-        Write-Host "[$currentDir] " -NoNewline
+        Write-Host "[$currentDir] " -ForegroundColor Yellow -NoNewline
         Write-Host  "($($gitStatus.Branch))" -ForegroundColor Green -NoNewline
         " "
     } else {
